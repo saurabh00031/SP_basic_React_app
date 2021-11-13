@@ -33,7 +33,7 @@ export default function Navbar(props) {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled"></a>
+                <a className="/"></a>
               </li>
             </ul>
             <form className="d-flex">
@@ -61,7 +61,7 @@ export default function Navbar(props) {
       
           
           
-           <h1><marquee>BASIC APP MADE USING REACT.JS</marquee></h1>
+          
           </div>
 
     )
