@@ -1,58 +1,88 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-let name="saurabh";
+//let name="saurabh patil";
 
 
-export default function Navbar() {
+
+export default function Navbar(props) {
     return (
-        <div>
-            <h1>{name}</h1>
-            Lorem ipsum dolor sit amet con
-            sectetur adipisicing elit. Distinctio similique ita
-            que recusandae commodi accusantium excepturi, accu
-            samus assumenda nobis prov
-            ident magni. Eveniet ipsum expedita impedit. Obcaecati p
-            rovident dolores corporis.
-             Odio sint veritatis ullam sapiente adipisci impe
-             dit consequuntur, illum nobis fugit rep
-             ellendus quo mollitia maxime cum, ad ratione excepturi e
-             xplicabo molestiae fuga laboru
-             m incidunt eveniet et debitis! Facilis tempora doloribus co
-             rporis aspernatur, molestias ne
-             cessitatibus molestiae quas, atque nesciunt consequatur i
-             d quae minus, fuga corrupti 
-             illum debi
-
-             tis assumenda labore? Earum illo repudiandae aliqui
-             d praesentium, quod reiciendis dolorem ea
-              excepturi culpa, aperiam voluptas? Nam officia, ea
-              que delectus id incidunt labo
-              riosam ea hic
-
-               est iusto optio voluptate. Placeat sunt magni iusto molestia
-               s quaerat autem eveniet cum perfe
-               rendis perspiciatis? Saepe, nisi perferendis aliquam illo exer
-               citationem, quasi cumque cupidita
-               te autem culpa minima minus consectetur atque n
-               ihil id debitis iusto, totam expli
-               cabo accusamus vo
-               luptate quis quam. Eum ipsa vel facilis quod laboriosam exp
-               edita velit in rerum iure mollitia nece
-               
-               
-               ssitatibus, assumenda aspernatur corrupti, quia, numquam illum
-                voluptatem esse repellat et. Nobis nam 
-               accusantium magnam ex fugit pariatur? A mollitia quod delectus ea
-               rum eligendi similique quo aspernatu
-               r iste in eos, neque velit amet fugiat ad ratione unde quibusda
-               m debitis veritatis est dolores, possi
-               
-               mus nihil nesciunt? Tempore assumenda totam sunt vitae u
-               llam quo nihil, itaque aspernatur facere. 
-               Impedit laborum, iusto vitae rerum laudantium as
-               periores necessitatibus quibus
-            dam perspiciatis quidem sint! Eligendi, sapiente rec
-            usandae voluptatum ipsa impedit vero!
+        <div><nav className="navbar navbar-expand-lg navbar-light bg-info pt-3">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/" >{props.title}</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="/">HOME</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">{props.aboutTxt}</a>
+              </li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  OPTIONS
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a className="dropdown-item" href="/">A</a></li>
+                  <li><a className="dropdown-item" href="/">B</a></li>
+                  <li><a className="dropdown-item" href="/">C</a></li>
+                  <li><a className="dropdown-item" href="/">D</a></li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link disabled"></a>
+              </li>
+            </ul>
+            <form className="d-flex">
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button className="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
         </div>
+      </nav>
+     
+           {/* <div className="blank">
+            <nav>
+              <li>HOME</li>
+              <li>ABOUS US</li>
+              <li>CONTACT US</li>
+              <li>BACK</li>
+            </nav>
+            </div>
+      
+          <div className="container">
+          <h1>hello <b>{name}</b></h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, nisi quos! Aliquam quasi, 
+          ipsam minus id in distinctio labore totam asperiores nesciunt cum.
+          </div>  */}
+      
+          
+          
+           <h1><marquee>BASIC APP MADE USING REACT.JS</marquee></h1>
+          </div>
+
     )
 }
+
+Navbar.propTypes={
+    title:PropTypes.string,
+    aboutTxt:PropTypes.string,
+}
+
+
+Navbar.defaultProps={
+    title:"set name",
+    aboutTxt:"ABOUT US"
+}
+
+// Navbar.defaultProps={
+//     title:"set name",
+//     aboutTxt:"set about"
+// }
+
+
+
+//type rfc fot above syntax,impt for props syntax
