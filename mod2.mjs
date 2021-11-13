@@ -9,3 +9,7 @@ export default d;
 export {c};
 export {a};
 export {b};
+
+
+const lk="saurabh patil";
+export{lk};
