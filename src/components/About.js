@@ -24,15 +24,16 @@ export default function About() {
             })
         }
         else{
-            {
+
+            
                 setStyleSP({
                     color:"red",
                     backgroundColor:"yellow",
                 })
-            }
+            
     
 
-        }
+             }
     }
 
    

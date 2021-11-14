@@ -145,11 +145,11 @@ export default function Textfm(props) {
 
 
 <button className="btn btn-primary mx-2" onClick={clickspUp}>
-Convert Upper to lower
+Convert Upper from lower
 </button>
 
 <button className="btn btn-secondary mx-2" onClick={clickspLw}>
-Convert Lower To Upper
+Convert Lower from Upper
 </button>
 
 <button className="btn btn-info mx-2" onClick={clickMax}>
