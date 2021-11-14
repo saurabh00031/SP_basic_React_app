@@ -28,6 +28,12 @@ export default function Textfm(props) {
 
     const clickMax=()=>
     {
+      if(text.length===0)
+      {
+        setText("not defined");
+
+      }
+      else{
         let str=text;
         let ASCII_SIZE = 256;
         let count = new Array(ASCII_SIZE);
@@ -57,6 +63,7 @@ export default function Textfm(props) {
             }
         }
         setText(result);
+      }
     }
 
     const clickMaxW=()=>
@@ -85,12 +92,34 @@ export default function Textfm(props) {
   setText(mostRepeatedWord);
         
     }
+    const clickClear=()=>
+    {
+        console.log("Clear") ;
+        setText("");
+    }
+    
+    const clickCopy=()=>
+    {
+      console.log('click Copy');
+      var text=document.getElementById("exampleFormControlTextarea1");
+      text.select();
+      navigator.clipboard.writeText(text.value);
+    }
+
+    const clickSpace=()=>
+    {
+        console.log("handling space") ;
+        let str=text.split(/[ ]+/);
+        setText(str.join(" "));
+    }
+
 
     const handleOnChange=(event)=>
     {
         console.log("Changed") ;
         setText(event.target.value)
     }
+
     const [text,setText]=useState('Enter the text');
 
     return (
@@ -131,15 +160,28 @@ Max repeated char
 Max repeated word
 </button>
 
+<button className="btn btn-warning mx-2" onClick={clickCopy}>
+ Copy_Text
+</button>
+
+<button className="btn btn-success mx-2" onClick={clickSpace}>
+Manage Space
+</button>
+
+<button className="btn btn-info mx-2" onClick={clickClear}>
+Clear Terminal
+</button>
 
 </div>
-<div className="container my-5">
-
+<div className="container mt-5">
+<hr/>
 <h1>Overall Summary</h1>
 <p>Letters == {text.length}</p>
 <p>Words == {text.split(" ").length}</p>
 <p>Time == {0.008*text.split(" ").length}</p>
 <p>Current string == {text}</p>
+
+<hr/>
 
 </div>
         </div>
